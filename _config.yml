@@ -16,7 +16,5 @@ google-ads:
     height: 600
 shoutbox-url: "http://lobby.ishoutbox.com"
 copyright:
-  years:
-    - 2012
-    - 2013
+  years: 2012-2013
   name: 'Filip H.F. "FiXato" Slagter'
