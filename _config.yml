@@ -1,2 +1,22 @@
-name: Your New Jekyll Site
+name: My Sample Jekyll Template
+description: Just a Jekyll template I'm working on.
 pygments: true
+google-analytics:
+  accountname: UA-17320621-12
+  domainname: fixato.github.io
+google-ads:
+  client: pub-6439905932679778
+  primary:
+    slot: 0534825376
+    width: 468
+    height: 60
+  skyscraper:
+    slot: 9707944159
+    width: 300
+    height: 600
+shoutbox-url: "http://lobby.ishoutbox.com"
+copyright:
+  years:
+    - 2012
+    - 2013
+  name: 'Filip H.F. "FiXato" Slagter'

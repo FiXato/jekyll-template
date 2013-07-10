@@ -3,44 +3,197 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
+        <title>{{ site.name }} - {{ page.title }}</title>
+        <meta name="description" content="{{ site.description }}">
         <meta name="viewport" content="width=device-width">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link href='http://fonts.googleapis.com/css?family=Aladin&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]>
+          
+          <style type="text/css">
+            h2, .gradient, .bottom-gradient, .top-gradient, .left-gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+        <script type="text/javascript"><!--
+          /* gAnalytics */
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
+          ga('create', '{{ site.google-analytics.accountname }}', '{{ site.google-analytics.domainname }}');
+          ga('send', 'pageview');
+          
+          /* Google Ads */
+          google_ad_client = "{{ site.google-ads.client }}";
+          google_ad_slot = "{{ site.google-ads.primary.slot }}";
+          google_ad_width = {{ site.google-ads.primary.width }};
+          google_ad_height = {{ site.google-ads.primary.height }};
+          //-->
+          </script>
     </head>
     <body>
+        <div id="container">
+            <header id="top-header">
+                <nav id="top-navigation" class="top-gradient">
+                    <ul><li class="active"><a href="">Lorem</a></li><li><a href="">Ipsum</a></li><li><a href="">Dolor</a></li><li><a href="">Sit</a></li><li><a href="">Aned</a></ul>
+                </nav>
+                <div id="header-image-container">
+                    <hgroup>
+                      <h1>{{ site.name }}</h1>
+                      <h2>{{ page.name }}</h2>
+                    </hgroup>
+                    <img src="https://lh3.googleusercontent.com/-FiuIBahI5KY/UHyJRpskAXI/AAAAAAAAAGU/VNOXICA45NY/s1000/Profile.png" />
+                </div>
+            </header>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+            <section id="main-container">
+              <h2>Divided into three columns</h2>
+                <div class="content-container columns">
+                    <article class="column column-third left-column justified">
+                        <h2>Lorem</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
 
-                {{ content }}
+                        <h2>Ipsum</h2>
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                    <article class="column column-third center-column">
+                        <h2>Dolor</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
+                        <h2>Sit</h2>
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                    <article class="column column-third right-column justified">
+                        <h2>Amet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                </div>
+                <h2>Divided into single column</h2>
+                <div class="content-container">
+                    <article class="column column-full">
+                        <h2>Lorem</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+
+                        <p>Aenean non nibh lorem. Praesent ipsum dolor, iaculis et sollicitudin eget, egestas at sem. Nam eu nisi nunc. Maecenas metus nulla, ultricies at velit ac, tincidunt eleifend risus. Nullam vitae purus sollicitudin, gravida lacus nec, bibendum lorem. Proin vitae tortor sodales, placerat velit id, interdum enim. Vivamus at suscipit arcu.</p>
+
+                        <h2>Dolor</h2>
+                        <p>Praesent feugiat sodales lacus sit amet sollicitudin. Phasellus varius semper ultricies. Aliquam non tincidunt ante. In sed auctor odio. Phasellus tempus elit eu velit ornare, non aliquam leo tempor. Quisque elit massa, pretium ut erat ut, blandit imperdiet elit. Proin auctor, nulla mollis lobortis aliquet, quam turpis iaculis arcu, at suscipit dui justo in urna. Pellentesque enim sem, condimentum sed est vel, semper egestas tortor. Donec laoreet rutrum dui, eget blandit tellus tincidunt id. Quisque velit urna, laoreet ac leo vel, varius feugiat diam. Aliquam erat volutpat. Phasellus vehicula, augue a blandit sagittis, odio mi sodales turpis, eu commodo tortor ipsum vitae sem. Suspendisse sagittis elit sed ipsum gravida, sed tempor felis tempus. Vestibulum ac urna dignissim, tempor odio a, eleifend diam. Nunc suscipit euismod tincidunt.</p>
+
+                        <p>Curabitur nec lorem id leo pellentesque fermentum. Duis metus tellus, porta id purus nec, tristique ullamcorper metus. Integer mattis cursus pulvinar. Nam adipiscing ante id felis mollis lacinia. Donec vel libero justo. Phasellus vel accumsan augue. Sed faucibus nulla sed condimentum molestie. Etiam mollis, tortor eu scelerisque eleifend, mauris augue gravida odio, id pretium purus magna sit amet purus. Vestibulum justo neque, aliquet eget risus vitae, ultrices dictum sem. Cras aliquet vel sem quis sodales.</p>
+
+                        <p>Etiam vel erat volutpat, egestas turpis varius, commodo ante. Nulla orci augue, consectetur id fringilla nec, auctor ac lectus. Cras facilisis risus eu velit auctor condimentum. Praesent tincidunt diam erat, id fringilla enim interdum at. Fusce mollis nisi non viverra consequat. Integer ullamcorper porttitor erat, eget luctus est. Fusce eget est eros. Donec placerat lorem eu arcu aliquet, quis auctor urna convallis. Aliquam erat volutpat. Donec ultricies sed lacus a mattis. Quisque vitae nibh arcu.</p>
+
+                        <h2>Sit</h2>
+                        <p>Duis urna purus, vehicula non hendrerit sed, consequat et nisi. Mauris eu urna pellentesque, congue orci id, ultricies erat. Sed varius neque libero, nec adipiscing mauris dignissim vitae. Praesent feugiat fringilla semper. Phasellus ut eros vel sem ultricies adipiscing a in velit. Etiam sed nisi sed neque faucibus consequat. Nunc tincidunt lectus nec arcu auctor, ac dapibus risus sollicitudin. Nam fermentum mi enim, vitae consectetur metus condimentum vel. Vestibulum augue nulla, vehicula placerat semper ac, venenatis ut nulla. Suspendisse eleifend sodales justo vitae rhoncus. Praesent gravida ipsum vitae justo laoreet, in sodales libero adipiscing. Etiam ac augue pellentesque, aliquet erat eu, vulputate mi. Proin vitae condimentum augue, a ultricies ante. Nulla non congue ante. Phasellus vehicula ipsum non ante sagittis, ac rutrum odio placerat.</p>
+
+                        <p>Nulla sit amet nisi id diam ullamcorper cursus. Proin ut condimentum orci. Fusce iaculis nisl sed augue imperdiet dignissim. Nam eleifend est vitae arcu blandit tristique. Maecenas congue dignissim venenatis. Sed hendrerit tortor non luctus mattis. Duis non vulputate dui. Nulla venenatis tortor sed tristique sollicitudin. In eu lacus ligula. Vestibulum rutrum venenatis lacinia.</p>
+
+                        <p>Donec tempor tincidunt lacinia. Nam ut nisi placerat, porttitor tellus adipiscing, ultrices diam. Cras nec neque mi. In leo quam, posuere eu rhoncus a, rutrum vel lacus. Donec tincidunt nibh et elit iaculis varius. Morbi eu commodo urna. Quisque sit amet elit vitae neque euismod elementum. Vestibulum bibendum, erat ut faucibus suscipit, odio nulla pretium nulla, vitae rutrum leo erat sit amet augue. Phasellus aliquet eget dolor sit amet fermentum. Nullam varius nulla quam, ut volutpat sem venenatis vulputate. Integer tincidunt congue sapien. Proin fringilla odio at diam scelerisque rhoncus. Suspendisse pellentesque dignissim elementum. Curabitur dictum convallis tortor, tristique faucibus nisl dictum eu. Donec nec orci at velit rhoncus vestibulum. Morbi vehicula sit amet enim at suscipit.</p>
+
+                        <h2>Amet</h2>
+                        <p>Morbi ante est, eleifend feugiat convallis non, fermentum et ipsum. Pellentesque lectus mauris, fermentum quis justo ac, condimentum vulputate erat. Nullam bibendum id est ut ornare. Nullam ullamcorper arcu vitae dignissim lobortis. Nunc tincidunt, nulla id sagittis facilisis, lorem tellus consectetur mi, in vulputate arcu dolor id velit. In tincidunt rhoncus accumsan. Aliquam libero metus, aliquet sit amet eros ut, ullamcorper viverra tellus. In eget nisl adipiscing, feugiat felis a, aliquam justo. In nunc sapien, pretium malesuada leo gravida, commodo eleifend leo. Pellentesque vel quam ante. Ut elementum vehicula urna, in tempor dui imperdiet et.</p>
+                    </article>
+                </div>
+                <h2>Advertisement space/divider</h2>
+                <div class="content-container columns">
+                  <div class="column column-full" style="text-align: center;">
+                    <div id="googlead">
+                      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                    </div>
+                  </div>
+                </div>
+                <h2>Divided into two columns</h2>
+                <div class="content-container columns">
+                    <article class="column column-half justified">
+                        <h2>Lorem</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+                    </article>
+                    <article class="column column-half justified">
+                        <h2>Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+                    </article>
+                </div>
+                <h2>Divided into four columns</h2>
+                <div class="content-container columns">
+                    <article class="column column-quarter justified">
+                        <h2>Lorem</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <h2>Ipsum</h2>
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                    <article class="column column-quarter">
+                        <h2>Dolor</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <h2>Sit</h2>
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                    <article class="column column-quarter justified">
+                        <h2>Amet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                    <article class="column column-quarter justified">
+                        <h2>Amet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dolor laoreet, mollis felis non, sagittis quam. Nullam lacinia auctor magna, eu vestibulum turpis. Sed eleifend nulla vel commodo eleifend. Curabitur egestas turpis eu erat aliquet, non sagittis risus mattis. Mauris iaculis fermentum viverra. Nullam adipiscing eleifend risus bibendum pulvinar. Maecenas mattis sollicitudin euismod. Etiam lobortis, sem non volutpat pharetra, ipsum urna laoreet felis, sed tincidunt lacus enim a urna. Etiam eget placerat nulla. Nunc viverra sem nec tortor rhoncus iaculis. Aenean pharetra nec quam eu ullamcorper. Nunc dolor neque, eleifend ut posuere vel, ultricies a mauris. Donec vestibulum dolor vitae rhoncus ornare. Nam et congue ligula.</p>
+
+                        <p>In in sodales lectus. Etiam sed bibendum purus, a aliquam justo. Cras pretium, mi at malesuada semper, sapien quam convallis orci, eget gravida sem enim eget nisl. Fusce placerat lectus at tellus sodales, ut viverra tortor tristique. Duis id enim non nulla hendrerit ullamcorper. Nunc ipsum turpis, hendrerit eu neque et, consequat mattis arcu. Sed consequat est ante, at suscipit ligula fringilla ac. Sed congue erat nec nisl sollicitudin, eu facilisis libero sagittis. Nunc auctor consequat ultrices. Maecenas et dapibus justo. Vestibulum eget enim ornare lacus posuere consectetur.</p>
+                    </article>
+                </div>
+            </section>
+            <aside id="adbar-left" class="sidebar">
+              <div class="sidebar-inner">
+                <div class="sidebar-contents"><h2 class="hidden">Side bar, for shoutbox or ads for instance</h2>
+                  <div id='shoutbox'>
+                    <iframe allowtransparency='true' frameborder='0' src='{{ site.shoutbox-url }}'></iframe>
+                  </div></div>
               </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
+            </aside>
+            <aside id="adbar-right" class="sidebar">
+              <div class="sidebar-inner">
+                <div class="sidebar-contents">
+                  <h2 class="hidden">Side bar, for shoutbox for instance</h2>
+                  <div class="googlead-large_skyscraper">
+                    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:{{ site.google-ads.skyscraper.width }}px;height:{{ site.google-ads.skyscraper.height }}px"
+                         data-ad-client="{{ site.google-ads.client }}"
+                         data-ad-slot="{{ site.google-ads.skyscraper.slot }}"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
+            </aside>
+            <footer id="bottom-footer">
+                <div class="top-gradient">
+                    <nav id="footer-navigation">
+                        <ul><li class="active"><a href="">Lorem</a></li><li><a href="">Ipsum</a></li><li><a href="">Dolor</a></li><li><a href="">Sit</a></li><li><a href="">Amed</a></ul>
+                    </nav>
+                    <p>Copyright {{% site.copyright.years.join('-') %}}, {{ site.copyright.name }}</p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
