@@ -70,8 +70,8 @@ h2,.left-gradient {
 /*#top-navigation {overflow: hidden;}*/
 #top-navigation {width: 100%;/*min-width: 470px;*/}
 #top-header, #main-container, #bottom-footer > div, #top-navigation { margin-left: auto; margin-right: auto;//*border: 1px solid #666;*/ }
-#header-image-container { text-align: center;width: 100%;border-top: 0; overflow: hidden;}
-#header-image-container img {padding: 1em;}
+#header-image-container { text-align: center;width: 100%;border-top: 0; overflow: hidden; padding-left: 1em; padding-right: 1em;}
+#header-image-container img {max-height: 150px;}
 #top-navigation {position: fixed; font-family: Aladin; font-size: 2.5em; background-color: #999; z-index: 99;}
 #top-navigation + * {padding-top: 50px;}
 #top-navigation ul, #footer-navigation ul {padding: 0;/*width: 100%;*/}
